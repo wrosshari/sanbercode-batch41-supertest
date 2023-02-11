@@ -23,3 +23,6 @@ How to run test :
 ```
 npm run test test/[filename].js
 ```
+
+Screen record run the test : 
+https://drive.google.com/file/d/1Tc82NDStR75Pmzk92HDFVv-fzSLWDaCt/view?usp=share_link
