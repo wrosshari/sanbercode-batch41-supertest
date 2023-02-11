@@ -1,0 +1,25 @@
+{
+  "name": "sanbercode-batch41-supertest",
+  "version": "1.0.0",
+  "description": "Welcome to my bootcamp task repository on GitHub! this repo is dedicated to API Automation assignments using Supertest, Mocha &amp; Chao that I have completed as part of my bootcamp program in Sanbercode - QA Engineer",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrosshari/sanbercode-batch41-supertest.git"
+  },
+  "author": "winda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrosshari/sanbercode-batch41-supertest/issues"
+  },
+  "homepage": "https://github.com/wrosshari/sanbercode-batch41-supertest#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "jsonschema": "^1.4.1",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
