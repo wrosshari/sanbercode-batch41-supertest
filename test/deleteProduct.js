@@ -1,9 +1,6 @@
 const { expect } = require("chai");
 const request = require("supertest");
-const {baseUrl, token} = require("../env/config.js")
-const jsonPayload = require("../test-data/productData.js")
-
-const productId = "b064328f-158a-4fb6-adca-ccee89534ef3";
+const {baseUrl, token, productId} = require("../env/config.js");
 
 describe("Delete product", () => {
     it("should delete a product", async () => {

@@ -1,6 +1,7 @@
 const { expect } = require("chai");
 const request = require("supertest");
 const {baseUrl, token} = require("../env/config.js");
+const jsonPayload = require("../test-data/productData.js")
 
 describe("Get product list", () => {
     it("should return a list of products", async () => {
@@ -10,7 +11,7 @@ describe("Get product list", () => {
           "Authorization": `Bearer ${token}`
         })
         expect((await response).status).to.equal(200);     
-        expect((await response).body.data.products[0].name).to.equal("taro ball"); 
+        expect((await response).body.data.products[0].name).to.equal(jsonPayload.addProduct.name); 
     })
 })
 

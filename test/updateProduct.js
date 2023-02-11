@@ -1,9 +1,7 @@
 const { expect } = require("chai");
 const request = require("supertest");
-const {baseUrl, token} = require("../env/config.js")
+const {baseUrl, token, productId} = require("../env/config.js");
 const jsonPayload = require("../test-data/productData.js")
-
-const productId = "b064328f-158a-4fb6-adca-ccee89534ef3";
 
 describe("Update product data positive case", () => {
     it("Update product data with valid data", async () => {
@@ -15,7 +13,7 @@ describe("Update product data positive case", () => {
         .send(jsonPayload.updateProduct)
         expect((await response).status).to.equal(200);     
         expect((await response).body.status).to.equal("success");
-        expect((await response).body.data.name).to.equal("taro");
+        expect((await response).body.data.name).to.equal(jsonPayload.updateProduct.name);
     })
 })
 

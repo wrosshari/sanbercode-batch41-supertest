@@ -15,7 +15,7 @@ describe("Add Product positive test case", () => {
       //assert response body
       expect((await response).status).to.equal(201);
       expect((await response).body.status).to.equal("success");     
-      expect((await response).body.data.name).to.equal(`taro ball`);  
+      expect((await response).body.data.name).to.equal(jsonPayload.addProduct.name);  
   });
 });
 

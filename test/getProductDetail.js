@@ -1,8 +1,9 @@
 const { expect } = require("chai");
 const request = require("supertest");
-const {baseUrl, token} = require("../env/config.js");
+const {baseUrl, token, productId} = require("../env/config.js");
+const jsonPayload = require("../test-data/productData.js")
 
-const productId = "b064328f-158a-4fb6-adca-ccee89534ef3";
+console.log(productId)
 
 describe("Get product detail", () => {
     it("Get product detail with valid id", async () => {
@@ -12,9 +13,9 @@ describe("Get product detail", () => {
           "Authorization": `Bearer ${token}`
         })
         expect((await response).status).to.equal(200);     
-        expect((await response).body.data.product.name).to.equal("taro ball");
+        expect((await response).body.data.product.name).to.equal(jsonPayload.addProduct.name);
         expect((await response).body.data.product.price).to.equal(3500); 
-        expect((await response).body.data.product.category_id).to.equal("7c4d44ff-1904-47e2-86ea-053c8e07461f"); 
+        expect((await response).body.data.product.category_id).to.equal(jsonPayload.addProduct.category_id); 
     })
 
     it("Get product detail with invalid id", async () => {
